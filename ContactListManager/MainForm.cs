@@ -25,7 +25,11 @@ namespace ContactListManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            if (dgvContacts.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Select a Contact to Edit.");
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
