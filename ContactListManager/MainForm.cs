@@ -30,6 +30,16 @@ namespace ContactListManager
                 MessageBox.Show("Select a Contact to Edit.");
                 return;
             }
+
+            var SelectedContact = (Contact)dgvContacts.SelectedRows[0].DataBoundItem;
+            ContactPopup popup = new ContactPopup();
+            popup.Contact = SelectedContact;
+            popup.PopulateField();
+
+            if (popup.ShowDialog() == DialogResult.OK)
+            {
+                UpdateContactGrid();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

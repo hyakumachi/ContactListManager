@@ -19,6 +19,14 @@ namespace ContactListManager
             }
         }
 
+        public void PopulateField()
+        {
+
+            this.txtName.Text = Contact.Name;
+            this.txtEmail.Text = Contact.Email;
+            this.txtPhoneNumber.Text = Contact.PhoneNumber;
+        }
+
         internal Contact Contact { get; set; }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
