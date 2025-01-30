@@ -29,73 +29,81 @@ namespace ContactListManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            txtName = new System.Windows.Forms.TextBox();
+            txtEmail = new System.Windows.Forms.TextBox();
+            txtPhoneNumber = new System.Windows.Forms.TextBox();
+            btnSave = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(38, 56);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(239, 23);
-            this.txtName.TabIndex = 0;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            txtName.Location = new System.Drawing.Point(43, 75);
+            txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtName.Name = "txtName";
+            txtName.PlaceholderText = "Name";
+            txtName.Size = new System.Drawing.Size(273, 27);
+            txtName.TabIndex = 0;
+            txtName.TextChanged += textBox1_TextChanged;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(38, 108);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(239, 23);
-            this.txtEmail.TabIndex = 1;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            txtEmail.Location = new System.Drawing.Point(43, 144);
+            txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Email";
+            txtEmail.Size = new System.Drawing.Size(273, 27);
+            txtEmail.TabIndex = 1;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(38, 159);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(239, 23);
-            this.txtPhoneNumber.TabIndex = 2;
-            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
+            txtPhoneNumber.Location = new System.Drawing.Point(43, 212);
+            txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.PlaceholderText = "Phone Number";
+            txtPhoneNumber.Size = new System.Drawing.Size(273, 27);
+            txtPhoneNumber.TabIndex = 2;
+            txtPhoneNumber.TextChanged += txtPhoneNumber_TextChanged;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(38, 236);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Location = new System.Drawing.Point(43, 315);
+            btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new System.Drawing.Size(86, 31);
+            btnSave.TabIndex = 3;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(164, 235);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Location = new System.Drawing.Point(187, 313);
+            btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(86, 31);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // ContactPopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtPhoneNumber);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtName);
-            this.Name = "ContactPopup";
-            this.Text = "ContactPopup";
-            this.Load += new System.EventHandler(this.ContactPopup_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(914, 600);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
+            Controls.Add(txtPhoneNumber);
+            Controls.Add(txtEmail);
+            Controls.Add(txtName);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "ContactPopup";
+            Text = "ContactPopup";
+            Load += ContactPopup_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
